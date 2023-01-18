@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <!--   Samsung information to TiwanBasedCompany   -->
+   
+	<bean id="emp" class="com.mkj.emphrapp.entity.Employee"> 
+		<property name="empName" value="Ramesh"></property>
+		<property name="empId" value="101"></property>
+		<property name="salary" value="2000"></property>
+		<property name="project" ref="p"></property>
+		
+	</bean>
+	 
+	 <bean id="p" class="com.mkj.emphrapp.entity.Project">
+	 	<property name="projectName" value="MyBankApp"></property>
+	 </bean>
+</beans>

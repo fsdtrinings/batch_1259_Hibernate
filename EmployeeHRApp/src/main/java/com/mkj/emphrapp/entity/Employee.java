@@ -1,11 +1,22 @@
 package com.mkj.emphrapp.entity;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Employee {
 
+	@Value("Ramesh")
 	private String empName;
+	@Value("102")
 	private int empId;
+	@Value("5000")
 	private int salary;
+	
+	@Autowired // inject the dependency use @Autowire
+	private Project project;
+	
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -33,6 +44,12 @@ public class Employee {
 	}
 	public void setSalary(int salary) {
 		this.salary = salary;
+	}
+	public Project getProject() {
+		return project;
+	}
+	public void setProject(Project project) {
+		this.project = project;
 	}
 	
 	
